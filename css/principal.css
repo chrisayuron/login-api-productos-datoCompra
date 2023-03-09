@@ -1,0 +1,395 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-family: sans-serif;
+}
+header{
+    width: 100%;
+    height: 10%;
+    padding: 0.5rem 3rem;
+}
+
+ul{
+    list-style: none;
+}
+
+nav ul{
+    display: flex;
+    gap: 10rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    font-size: 2.5rem;
+    color: rgb(245, 160, 3);
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(245, 160, 3);
+
+}
+
+a:hover{
+    background-color: rgb(245, 160, 3);
+    color: rgba(11, 11, 204, 0.884);
+}
+
+#salir{
+    cursor: pointer;
+}
+#salir:hover{
+    background-color: rgb(245, 160, 3);
+    color: rgba(11, 11, 204, 0.884);
+}
+
+main{
+    display: grid;
+    justify-items: center;   
+}
+/*<a href="https://www.freepik.es/vector-gratis/diseno-abstracto-pagina-destino-plantilla-sitio-web-o-aplicacion-onda-minima-abstracta-colorida_23054201.htm#query=fondos%20para%20paginas%20web&position=8&from_view=keyword&track=ais">Imagen de GarryKillian</a> en Freepik */
+.nosotros{
+   height: 100vh;
+   background-image: url("../images/fondoPrincipal1.svg");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.nosotros__container{
+    background-color: rgba(129, 118, 118, 0.329);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    'titulo titulo'
+    'imagen texto';
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 25% 75%;
+    margin-bottom: 100px;
+}
+
+.nosotros h1{
+    grid-area: titulo;
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 1px 1px 10px white;
+ 
+    color: #fff;
+}
+    
+.nosotros p{
+    font-size: 2.5rem;
+    grid-area:texto;
+    width: 90%;
+    text-align: justify;
+    align-items: center;
+    color: #fff;
+}
+
+.nosotros .imagen{
+    grid-area: imagen;
+    display: flex;
+    justify-content: center;
+  
+}
+
+.imagen img{
+    width: 70%;
+    height: 70%;
+}
+
+.products{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem 0;
+    overflow: scroll;
+    /* border: solid 5px black; */
+}
+
+.card__product  {
+    padding: 1%;
+    border-radius: 10px;
+    height: 500px;
+    width: 300px;
+    box-shadow: 1px 1px 10px black;
+  
+}
+
+.card__product-modal  {
+    padding: 1%;
+    border-radius: 10px;
+    height: 480px;
+    width: 300px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.card__product__title{
+    text-align: center;
+    height: 20%;
+    font-size: 1.5rem;
+    padding: 1% 0;
+}
+
+.card__product__title-modal{
+    text-align: center;
+    height: 50px;
+    font-size: 1.3rem;
+    padding: 1% 0;
+}
+
+
+.card__product__image{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__product__image-modal{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card__product__image img{
+    height: 100%;
+    width: fit-content;
+    padding: 2% 0;
+}
+
+.card__product__image-modal img{
+    height: 100%;
+    width: fit-content;
+    padding: 2% 0;
+}
+
+.card__product__description{
+    height: 30%;
+    padding: 2.5%;
+    overflow: auto;
+    font-size: 1.5rem;
+    text-align: justify;    
+}
+.card__product__description-modal{
+    height: 200px;
+    padding: 2.5%;
+
+    font-size: 1.5rem;
+    text-align: justify;   
+}
+
+.card__product__price{
+    color:green;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 3% 0;
+    font-weight: bold;
+}
+
+.card__product__price-modal{
+    color:green;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 3% 0;
+    font-weight: bold;
+}
+
+.card__product__button{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.card__product__button-modal{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/*https://markodenic.com/tools/buttons-generator/ */
+.btn-buy,.btn-sale {
+    min-width: 130px;
+    width: 48%;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+    background: #3d348b;
+    box-shadow: 0 5px #2c0b8e;
+    /* margin: 0 1px 0 0; */
+  }
+
+  .btn-buy:hover,.btn-sale:hover {
+      box-shadow: 0 3px #2c0b8e;
+      top: 1px;
+    }
+    
+    .btn-buy:active,.btn-sale:active {
+        box-shadow: 0 0 #2c0b8e;
+        top: 5px;
+    }
+    
+    .btn-cancel {
+      min-width: 130px;
+      width: 48%;
+      color: #fff;
+      padding: 5px 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+      outline: none;
+      border-radius: 15px;
+      border: none;
+      background: #ef233c;
+      box-shadow: 0 5px #d90429;
+    }
+    .btn-cancel:hover {
+      box-shadow: 0 3px #d90429;
+      top: 1px;
+    }
+    .btn-cancel:active {
+      box-shadow: 0 0 #d90429;
+      top: 5px;
+    }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.modal{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.938);
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.ventana{
+    background-color: white;
+    width: 450px;
+    height: 550px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cerrar{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    cursor:pointer;
+}
+.cerrar:hover{
+    background-color: white;
+    color:red ;
+    border: 1px solid;
+}
+
+
+@media (max-width:800px){
+    .nosotros__container{
+        background-color: rgba(0, 0, 0, 0.37);
+        /* height: 100vh; */
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+        'titulo'
+        'imagen'
+        'texto';
+        grid-template-columns: 1fr;
+        grid-template-rows:15% 45% 40% ;
+        margin-bottom: 100px;
+    }
+
+    /* .nosotros{
+        background-image: url("../images/fondoPrincipal1.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+     } */
+    
+     .nosotros h1{
+        grid-area: titulo;
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bolder;
+        text-shadow: 1px 1px 10px white;
+        display: flex;
+        align-items: center;
+        color: #fff;
+    }
+        
+    .nosotros p{
+        font-size: 1.5rem;
+        grid-area:texto;
+        width: 90%;
+        /* padding: 2rem 0; */
+        text-align: justify;
+        align-items: center;
+        margin: auto;
+        color: #fff;
+        
+    }
+    
+    .nosotros .imagen{
+        grid-area: imagen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .imagen img{
+        width: auto;
+        height: 100%;
+    }
+}

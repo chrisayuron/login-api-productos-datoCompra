@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- <script defer src="./index.js"></script> -->
+    <script defer src="./js/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">BIENVENIDO</h2>
+        <input type="text" placeholder="usuario" id="user" class="user">
+        <div class="contenedor__password">
+        <input type="password" placeholder="contraseña" id="password" class="password">
+        <span class="mostrar" id="mostrar">
+            <svg class="icon icon-view-show">
+                <use xlink:href="#icon-view-show">
+                    <symbol id="icon-view-show" viewBox="0 0 20 20">
+                        <path d="M0.2 10c1.86-3.592 5.548-6.004 9.8-6.004s7.94 2.412 9.771 5.943l0.029 0.061c-1.86 3.592-5.548 6.004-9.8 6.004s-7.94-2.412-9.771-5.943l-0.029-0.061zM10 14c2.209 0 4-1.791 4-4s-1.791-4-4-4v0c-2.209 0-4 1.791-4 4s1.791 4 4 4v0zM10 12c-1.105 0-2-0.895-2-2s0.895-2 2-2v0c1.105 0 2 0.895 2 2s-0.895 2-2 2v0z"></path>
+                        </symbol>
+                </use>
+        </svg>
+    </span>
+        </div>
+        <p id="error__login">Usuario o contraseña invalido</p>
+        <button id="login" class="btn">LOGIN</button>
+        <p class="remember">
+            <input type="checkbox" id="recordarme" >
+            <label for="">Recordarme</label>
+        </p>
+        <p><a href="#">olvidé mi contraseña</a></p>
+        <p><a href="#">registrarse</a></p>
+    </div>
+</body>
+</html>
